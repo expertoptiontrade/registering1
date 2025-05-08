@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter Activation Code</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fbff;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .box {
+      background-color: #e6f0fa;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+    }
+
+    h2 {
+      color: #5a3fc0;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #5a3fc0;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #472f9c;
+    }
+
+    .error {
+      color: red;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Enter Activation Code</h2>
+    <input type="text" id="activationCode" placeholder="Enter code here">
+    <br>
+    <button class="button" onclick="checkCode()">Submit Code</button>
+    <p class="error" id="errorText"></p>
+  </div>
+
+  <script>
+    function checkCode() {
+      const code = document.getElementById('activationCode').value;
+      const errorText = document.getElementById('errorText');
+
+      if (code === "248135") {
+        alert("Activation successful!");
+        // You can redirect or show another page here if needed
+      } else {
+        errorText.textContent = "Invalid activation code. Please contact manager.";
+      }
+    }
+  </script>
+
+</body>
+</html>
