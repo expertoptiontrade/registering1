@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MoneyEasily - Register</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef5fa;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+    .container {
+      background-color: white;
+      padding: 40px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+    .checkbox-container input {
+      margin-right: 10px;
+    }
+    .submit-button {
+      background-color: #4338ca;
+      color: white;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2><img src="moneyeasily250.jpg" alt="MoneyEasily" style="height: 50px;"></h2>
+    <p>Register to get started</p>
+    <form action="payment.html" method="GET">
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Last Name" required>
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Upline Username" value="MANAGER EMMANUEL" readonly>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Repeat Password" required>
+      <div class="checkbox-container">
+        <input type="checkbox" required>
+        <label>I agree to all Terms & Conditions.</label>
+      </div>
+      <button type="submit" class="submit-button">Submit Now</button>
+    </form>
+    <div class="login-link">
+      Already have an account? <a href="#">Login</a>
+    </div>
+  </div>
+</body>
+</html>
