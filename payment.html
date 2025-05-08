@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Activate Account & Upload Screenshot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f8ff;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .box {
+      border: 1px solid #ccc;
+      background-color: #e6f0fa;
+      padding: 20px;
+      max-width: 500px;
+      margin: 20px auto;
+      border-radius: 8px;
+    }
+
+    h2 {
+      background-color: #5a3fc0;
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .warning {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .button {
+      background-color: #5a3fc0;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .button:hover {
+      background-color: #472f9c;
+    }
+
+    #uploadBox {
+      display: none;
+    }
+
+    input[type="file"] {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Activate Account Box -->
+  <div class="box" id="activateBox">
+    <h2>ACTIVATE ACCOUNT HERE</h2>
+    <p><strong>PAY WITH MTN RWANDA</strong></p>
+    <p><strong>OPTION</strong><br>
+      *182*8*1*1632327#<br>
+      IZINA NI (WILLY)<br>
+      UMUBARE W'AMAFARANGA 5300 RWF</p>
+    <p><strong>N.B:</strong> BIRABUJIJWE KUGIRA INDI NUMBER WISHYURAHO<br>
+      ITARIMUZA TANZWE HARUGURU</p>
+    <p class="warning">Sending funds on wrong number will end up lose!</p>
+    <button class="button" onclick="showUpload()">Submit Payment Request</button>
+  </div>
+
+  <!-- Upload Screenshot Box -->
+  <div class="box" id="uploadBox">
+    <h2>UPLOAD PAYMENT SCREENSHOT</h2>
+    <p>Please upload the screenshot of your payment to verify your transaction.</p>
+    <input type="file" accept="image/*" id="screenshotFile">
+    <br>
+    <button class="button" onclick="goToActivationPage()">Submit Screenshot</button>
+  </div>
+
+  <script>
+    function showUpload() {
+      document.getElementById('activateBox').style.display = 'none';
+      document.getElementById('uploadBox').style.display = 'block';
+    }
+
+    function submitScreenshot() {
+      const fileInput = document.getElementById('screenshotFile');
+      if (!fileInput.files.length) {
+        alert("Please upload a screenshot before submitting.");
+        return;
+      }
+
+      // Screenshot "uploaded" locally – now redirect to activation page
+      window.location.href = 'activation-code.html';
+    }
+  </script>
+
+</body>
+</html>
